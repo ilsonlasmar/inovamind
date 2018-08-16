@@ -1,6 +1,14 @@
 # Inovamind
 Projeto exemplo de um Web crawler que capta informações do site http://quotes.toscrape.com/
 
+## Dependencies
+* Rails 5.2
+* Webpacker - React
+* Sidekiq
+* Fast Json Api / Netflix
+* Json Web Token - JWT
+* HTTParty
+
 ## Requirements
 **O Projeto é todo executado via Docker.**
 
@@ -18,13 +26,7 @@ Projeto exemplo de um Web crawler que capta informações do site http://quotes.
 * `docker-compose up`
 
 
-## Dependencies
-* Rails 5.2
-* Webpacker - React
-* Sidekiq
-* Fast Json Api / Netflix
-* Json Web Token - JWT
-* HTTParty
+
 
 
 
