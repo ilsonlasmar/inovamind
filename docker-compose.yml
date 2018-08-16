@@ -1,0 +1,58 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    network_mode: bridge
+    container_name: "mongodb"
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null
+
+  redis:
+    image: redis:4.0-alpine
+    network_mode: bridge
+    restart: always
+    volumes:
+      - ./redis:/data   
+
+  web:
+    build: .
+    network_mode: bridge
+    environment:
+      WEBPACK_DEV_SERVER_HOST: webpack_dev_server
+    links:
+      - webpack_dev_server    
+      - mongodb
+      - redis
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/inovamind
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+      - redis
+      
+  webpack_dev_server:
+    build: .
+    network_mode: bridge
+    env_file:
+      - '.env.docker'
+    command: bin/webpack-dev-server
+    volumes:
+      - .:/webpacker-inovamind
+    ports:
+      - '3035:3035'   
+  worker:
+    build: .
+    network_mode: bridge
+    command: bundle exec sidekiq
+    links:
+    - mongodb
+    - redis      
+     
