@@ -1,5 +1,10 @@
 # Inovamind
 Projeto exemplo de um Web crawler que capta informações do site http://quotes.toscrape.com/
+A Aplicação Inovamind foi elaborado pensando no trabalho massivo do crawler em extrair informações de um determinado website. Pensando nisso foi utilizado o Sidekiq + Redis para execução do crawler em background e assim salvando as informações no MongoDB. Em toda nova consulta é gerado uma tarefa para o Sidekiq executar em background a tarefa.
+
+Ao salvar as informações extraidas no website tive a preocupação de atualizar os registros já existentes, assim não criando registros duplicados
+na base de dados. Como aumento de desempenho foi utilizado a serialização de objetos pela GEM Fast JSON API da Netflix.
+Mais sobre performance: https://github.com/Netflix/fast_jsonapi/blob/master/performance_methodology.md
 
 ## Dependencies
 * Rails 5.2
@@ -27,8 +32,10 @@ Projeto exemplo de um Web crawler que capta informações do site http://quotes.
 ### 2° Step - Let's Go!
 * `docker-compose up`
 
-## Usage
-O projeto da Inovamind foi elaborado pensando no trabalho massivo na execução do crawler em extrair informações de um determinado website. Pensando nisso foi utilizado o Sidekiq + Redis para execução do crawler em background e assim salvando as informações no MongoDB. Em toda nova consulta é gerado uma tarefa para o Sidekiq executar em background a tarefa.
+
+
+
+
 
 
 
