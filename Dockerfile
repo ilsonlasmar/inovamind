@@ -13,4 +13,5 @@ WORKDIR /inovamind
 COPY Gemfile /inovamind/Gemfile
 COPY Gemfile.lock /inovamind/Gemfile.lock
 RUN bundle install
+RUN yarn install
 COPY . /inovamind
