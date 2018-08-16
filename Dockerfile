@@ -1,6 +1,6 @@
 FROM ruby:2.5
 RUN apt-get update -qq && apt-get install -y build-essential curl libpq-dev \
-&& curl -sL https://deb.nodesource.com/setup_8.x | bash \
+&& curl -sL https://deb.nodesource.com/setup_9.x | bash \
 && apt-get install nodejs -yq
 # yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -\
