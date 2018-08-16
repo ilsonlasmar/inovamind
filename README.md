@@ -43,10 +43,13 @@ git clone https://github.com/ilsonlasmar/inovamind.git
 * `cd inovamind/`
 * `docker-compose build`
 * `docker-compose run --rm web bash -c "bundle exec rails db:create && rails db:seed"`
-* `docker-compose run --rm web bash -c "yarn install"`
+* `docker-compose run --rm web bash -c "rm -rf node_modules/ && yarn install"`
 
 ### 2° Step - Let's Go!
-* `docker-compose up`
+#### Linux
+* sudo chown -R $USER:$USER .
+
+* `docker-compose up --build`
 * `browser: http://localhost:3000`
 
 
