@@ -8,6 +8,7 @@ Projeto exemplo de um Web crawler que capta informações do site http://quotes.
 * Fast Json Api / Netflix
 * Json Web Token - JWT
 * HTTParty
+* MongoDB
 
 ## Requirements
 **O Projeto é todo executado via Docker.**
@@ -24,6 +25,9 @@ Projeto exemplo de um Web crawler que capta informações do site http://quotes.
 
 ### 2° Step - Let's Go!
 * `docker-compose up`
+
+## Usage
+O Projeto da Inovamind é 
 
 
 
