@@ -8,7 +8,7 @@ Projeto exemplo de um Web crawler que capta informações do site http://quotes.
 - Docker Compose
 
 ## Installing and Setting
-É necessário baixar as imagens utilizadas no projeto Inovamind e configuração inicial do mesmo.
+É necessário o download das imagens utilizadas no projeto Inovamind e configuração inicial do mesmo.
 
 ### 1° Step
 * `docker-compose build`
@@ -16,6 +16,15 @@ Projeto exemplo de um Web crawler que capta informações do site http://quotes.
 
 ### 2° Step - Let's Go!
 * `docker-compose up`
+
+
+## Dependencies
+* Rails 5.2
+* Webpacker - React
+* Sidekiq
+* Fast Json Api / Netflix
+* Json Web Token - JWT
+* HTTParty
 
 
 
