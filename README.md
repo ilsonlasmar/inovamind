@@ -48,7 +48,9 @@ git clone https://github.com/ilsonlasmar/inovamind.git
 ### 2° Step - Let's Go!
 #### Linux
 * `sudo chown -R $USER:$USER .`
-
+* `docker-compose up --build`
+* `browser: http://localhost:3000`
+#### Others
 * `docker-compose up --build`
 * `browser: http://localhost:3000`
 
