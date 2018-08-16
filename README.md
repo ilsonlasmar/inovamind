@@ -7,7 +7,9 @@ Mais sobre performance da Gem Fast Json API: https://github.com/Netflix/fast_jso
 
 A API da Aplicação foi elaborada para ser versionada caso aja a necessidade, com a utilização das Constraints. É passado a versão via cabeçalho e a aplicação redireciona para o consumo versionado solicitado.
 
-A Autenticação é via JWT, onde faço
+A Autenticação é via JWT, onde é gerado um token e é feito a verificação sempre que necessário de áreas que precisam de autenticação para acesso. 
+
+Na View foi utilizado React com o auxilio do Webpacker do Rails, foi escolhido React.js pela facilidade de manipulação da DOM e elaboração de requisições via Axios.
 
 
 
